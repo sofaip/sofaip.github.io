@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Time - Контакти</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+           <a href="index.html" class="logo">
+    <i class="fas fa-globe-americas"></i>
+    Travel Time
+</a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="tours.html">Тури</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="contacts.html" class="active">Контакти</a></li>
+                </ul>
+                <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+</div>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="tours.html">Тури</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Contacts Hero Section -->
+        <section class="page-hero">
+            <div class="container">
+                <h1>Наші Контакти</h1>
+                <p>Ми завжди на зв'язку, щоб зробити вашу подорож ідеальною</p>
+            </div>
+        </section>
+
+        <!-- Contact Info Section -->
+        <section id="contact-info" class="contact-info">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Адреса</h3>
+                        <p> м. Львів, вул. Бернарда Меретина, 10</p>
+                        <p class="contact-note">Графік роботи: 09:00 - 20:00</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Телефони</h3>
+                        <p>+38 (099) 123-45-67</p>
+                        <p>+38 (073) 765-43-21</p>
+                        <p class="contact-note">Безкоштовно по Україні</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email</h3>
+                        <p>sofiia.pavlova.pp.2024@lpnu.ua</p>
+                        <p>booking@traveltime.com</p>
+                        <p class="contact-note">Відповідаємо протягом 2 годин</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Графік роботи</h3>
+                        <p>Пн-Пт: 09:00 - 20:00</p>
+                        <p>Сб-Нд: 10:00 - 18:00</p>
+                        <p class="contact-note">Без вихідних</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form & Map Section -->
+        <section class="contact-form-map">
+            <div class="container">
+                <div class="form-map-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-section">
+                        <h2>Напишіть нам</h2>
+                        <p class="form-subtitle">Залиште заявку і ми зв'яжемося з вами найближчим часом</p>
+                        
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Ім'я *</label>
+                                <input type="text" id="name" name="name" required>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Тема повідомлення</label>
+                                <select id="subject" name="subject">
+                                    <option value="booking">Бронювання туру</option>
+                                    <option value="consultation">Консультація</option>
+                                    <option value="cooperation">Співпраця</option>
+                                    <option value="other">Інше</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Повідомлення *</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Опишіть ваше питання..."></textarea>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="consent" name="consent" required>
+                                <label for="consent">Я згоден(на) з обробкою персональних даних</label>
+                                <span class="error-message"></span>
+                            </div>
+
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Надіслати повідомлення
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Map Section -->
+                    <div class="map-section">
+                        <h2>Ми на карті</h2>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.265441240377!2d24.004921576399788!3d49.83746977148155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473addf25b27a669%3A0xda27575ef330476c!2sTravel%20Mix%20Lviv!5e0!3m2!1suk!2sua!4v1760626989546!5m2!1suk!2sua" 
+                                    width="100%" height="400" style="border:0;border-radius:10px;" allowfullscreen="" 
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                        
+                        <!-- Weather Widget -->
+                        <div class="weather-widget-sidebar">
+                            <h3>Погода у Львові</h3>
+                            <div class="weather-info-sidebar">
+                                <div class="weather-main">
+                                    <i class="fas fa-sun"></i>
+                                    <div class="weather-temp">+18°C</div>
+                                </div>
+                                <div class="weather-details">
+                                    <div class="weather-detail">
+                                        <span class="label">Відчувається як:</span>
+                                        <span class="value">+16°C</span>
+                                    </div>
+                                    <div class="weather-detail">
+                                        <span class="label">Вологість:</span>
+                                        <span class="value">65%</span>
+                                    </div>
+                                    <div class="weather-detail">
+                                        <span class="label">Вітер:</span>
+                                        <span class="value">3 м/с</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Widget -->
+       <section class="social-widget">
+    <div class="container">
+        <h2>Приєднуйтесь до нас у соцмережах</h2>
+        <div class="social-buttons">
+            <a href="https://facebook.com" target="_blank" class="social-btn facebook">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-btn instagram">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://t.me" target="_blank" class="social-btn telegram">
+                <i class="fab fa-telegram"></i>
+                <span>Telegram</span>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="social-btn youtube">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+        <!-- FAQ Section -->
+        <section class="faq-contact">
+            <div class="container">
+                <h2>Часті Запитання</h2>
+                <div class="faq-grid">
+                    <div class="faq-item-contact">
+                        <h4>Як швидко ви відповідаєте на заявки?</h4>
+                        <p>Ми відповідаємо на всі заявки протягом 2 годин у робочий час. У вихідні - протягом 24 годин.</p>
+                    </div>
+                    
+                    <div class="faq-item-contact">
+                        <h4>Чи можна забронювати тур онлайн?</h4>
+                        <p>Так! Заповніть форму на сайті, і наш менеджер зв'яжеться з вами для підтвердження бронювання.</p>
+                    </div>
+                    
+                    <div class="faq-item-contact">
+                        <h4>Чи працюєте ви у вихідні?</h4>
+                        <p>Так, ми працюємо без вихідних з 10:00 до 18:00 у суботу та неділю.</p>
+                    </div>
+                    
+                    <div class="faq-item-contact">
+                        <h4>Чи надаєте ви консультації по візам?</h4>
+                        <p>Так, наші експерти надають повну консультацію щодо отримання віз для всіх країн.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Travel Time</h4>
+                    <p>Подорожуй з нами - отримуй незабутні враження!</p>
+                   <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+</div>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <p><i class="fas fa-phone"></i> +38 (099) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> sofiia.pavlova.pp.2024@lpnu.ua</p>
+                    <p><i class="fas fa-map-marker-alt"></i>м. Львів, вул. Бернарда Меретина, 10</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Швидкі посилання</h4>
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="tours.html">Тури</a></li>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Travel Time. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Повідомлення відправлено!</h3>
+            <p>Дякуємо за ваше звернення. Наш менеджер зв'яжеться з вами найближчим часом.</p>
+            <button class="cta-button" onclick="closeSuccessModal()">Гаразд</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Валідація форми
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const successModal = document.getElementById('successModal');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    if (validateForm()) {
+                        // Симуляція відправки форми
+                        showSuccessModal();
+                        contactForm.reset();
+                    }
+                });
+            }
+            
+            function validateForm() {
+                let isValid = true;
+                const fields = contactForm.querySelectorAll('input[required], textarea[required], select[required]');
+                
+                fields.forEach(field => {
+                    const errorSpan = field.parentElement.querySelector('.error-message');
+                    
+                    if (!field.value.trim()) {
+                        showError(field, 'Це поле обов\'язкове для заповнення');
+                        isValid = false;
+                    } else if (field.type === 'email' && !isValidEmail(field.value)) {
+                        showError(field, 'Будь ласка, введіть коректний email');
+                        isValid = false;
+                    } else if (field.type === 'tel' && !isValidPhone(field.value)) {
+                        showError(field, 'Будь ласка, введіть коректний номер телефону');
+                        isValid = false;
+                    } else {
+                        clearError(field);
+                    }
+                });
+                
+                const consent = document.getElementById('consent');
+                if (!consent.checked) {
+                    showError(consent, 'Необхідно надати згоду');
+                    isValid = false;
+                } else {
+                    clearError(consent);
+                }
+                
+                return isValid;
+            }
+            
+            function showError(field, message) {
+                const errorSpan = field.parentElement.querySelector('.error-message');
+                field.style.borderColor = '#e74c3c';
+                errorSpan.textContent = message;
+                errorSpan.style.display = 'block';
+            }
+            
+            function clearError(field) {
+                const errorSpan = field.parentElement.querySelector('.error-message');
+                field.style.borderColor = '#ddd';
+                errorSpan.textContent = '';
+                errorSpan.style.display = 'none';
+            }
+            
+            function isValidEmail(email) {
+                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return re.test(email);
+            }
+            
+            function isValidPhone(phone) {
+                const re = /^[\+]?[0-9\s\-\(\)]{10,}$/;
+                return re.test(phone);
+            }
+            
+            function showSuccessModal() {
+                successModal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+            
+            window.closeSuccessModal = function() {
+                successModal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+            
+            // Закриття модального вікна
+            const closeBtn = successModal.querySelector('.close-modal');
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeSuccessModal);
+            }
+            
+            successModal.addEventListener('click', function(e) {
+                if (e.target === successModal) {
+                    closeSuccessModal();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

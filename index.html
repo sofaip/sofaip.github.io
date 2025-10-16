@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Time - Головна</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+           <a href="#" class="logo" onclick="scrollToTop()">
+    <i class="fas fa-globe-americas"></i>
+    Travel Time
+</a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Головна</a></li>
+                    <li><a href="tours.html">Тури</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+               <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+</div>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="tours.html">Тури</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-slider">
+                <div class="slide active">
+                    <div class="hero-content">
+                        <h1>Відкривай світ з Travel Time</h1>
+                        <p>Неймовірні пригоди чекають на тебе</p>
+                        <button class="cta-button" onclick="scrollToSection('popular-tours')">Знайти тур</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="hero-content">
+                        <h1>Подорожуй з комфортом</h1>
+                        <p>Найкращі маршрути по всьому світу</p>
+                        <button class="cta-button" onclick="scrollToSection('popular-tours')">Переглянути пропозиції</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section id="advantages" class="advantages">
+            <div class="container">
+                <h2>Чому обирають нас</h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Безпека</h3>
+                        <p>Гарантія безпеки під час подорожей</p>
+                    </div>
+                    <div class="advantage-card">
+                        <i class="fas fa-wallet"></i>
+                        <h3>Доступні ціни</h3>
+                        <p>Найкращі пропозиції на ринку</p>
+                    </div>
+                    <div class="advantage-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Підтримка 24/7</h3>
+                        <p>Допомога на будь-якому етапі подорожі</p>
+                    </div>
+                    <div class="advantage-card">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h3>Унікальні маршрути</h3>
+                        <p>Ексклюзивні тури від досвідчених гідів</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="popular-tours" class="popular-tours">
+            <div class="container">
+                <h2>Популярні тури</h2>
+                <div class="tours-grid">
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="images/tour-italy.jpg" alt="Тур до Італії">
+                            <div class="tour-price">€899</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3>Романтична Італія</h3>
+                            <p>7 днів чарівних міст та смачної кухні</p>
+                            <div class="tour-features">
+                                <span><i class="fas fa-calendar"></i> 7 днів</span>
+                                <span><i class="fas fa-user"></i> 2 особи</span>
+                            </div>
+                            <button class="details-btn" onclick="showTourModal(1)">Детальніше</button>
+                        </div>
+                    </div>
+                    
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="images/tour-greece.jpg" alt="Тур до Греції">
+                            <div class="tour-price">€759</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3>Антична Греція</h3>
+                            <p>Знайомство з історією та островами</p>
+                            <div class="tour-features">
+                                <span><i class="fas fa-calendar"></i> 5 днів</span>
+                                <span><i class="fas fa-user"></i> 1-4 особи</span>
+                            </div>
+                            <button class="details-btn" onclick="showTourModal(2)">Детальніше</button>
+                        </div>
+                    </div>
+
+                    <div class="tour-card">
+                        <div class="tour-image">
+                            <img src="images/tour-egypt.jpg" alt="Тур до Єгипту">
+                            <div class="tour-price">€699</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3>Таємничий Єгипет</h3>
+                            <p>Піраміди, море та захоплююча історія</p>
+                            <div class="tour-features">
+                                <span><i class="fas fa-calendar"></i> 8 днів</span>
+                                <span><i class="fas fa-user"></i> 2 особи</span>
+                            </div>
+                            <button class="details-btn" onclick="showTourModal(3)">Детальніше</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="discover" class="discover">
+            <div class="container">
+                <h2>Відкривай світ з нами</h2>
+                <div class="discover-content">
+                    <div class="video-container">
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/IuTDuvYr7f0?si=fKoQzBpjh_a-rKgF" 
+                                title="YouTube video player" frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.265441240377!2d24.004921576399788!3d49.83746977148155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473addf25b27a669%3A0xda27575ef330476c!2sTravel%20Mix%20Lviv!5e0!3m2!1suk!2sua!4v1760626989546!5m2!1suk!2sua" 
+                                width="100%" height="315" style="border:0;" allowfullscreen="" 
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="weather-widget">
+            <div class="container">
+                <h3>Погода в популярних напрямках</h3>
+                <div class="weather-cards">
+                    <div class="weather-card">
+                        <h4>Рим, Італія</h4>
+                        <div class="weather-info">
+                            <i class="fas fa-sun"></i>
+                            <span>+25°C</span>
+                        </div>
+                    </div>
+                    <div class="weather-card">
+                        <h4>Афіни, Греція</h4>
+                        <div class="weather-info">
+                            <i class="fas fa-cloud-sun"></i>
+                            <span>+28°C</span>
+                        </div>
+                    </div>
+                    <div class="weather-card">
+                        <h4>Шарм-ель-Шейх, Єгипет</h4>
+                        <div class="weather-info">
+                            <i class="fas fa-sun"></i>
+                            <span>+32°C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Travel Time</h4>
+                    <p>Подорожуй з нами - отримуй незабутні враження!</p>
+                    <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+</div>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <p><i class="fas fa-phone"></i> +38 (099) 123-45-67</p>
+                    <p><i class="fas fa-envelope"></i> sofiia.pavlova.pp.2024@lpnu.ua</p>
+                    <p><i class="fas fa-map-marker-alt"></i>м. Львів, вул. Бернарда Меретина, 10</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Швидкі посилання</h4>
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="tours.html">Тури</a></li>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Travel Time. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div id="tourModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Деталі туру</h3>
+            <div id="modalContent">
+                <!-- Content will be loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

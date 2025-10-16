@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Time - Тури</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+          <a href="index.html" class="logo">
+    <i class="fas fa-globe-americas"></i>
+    Travel Time
+</a>
+            <nav class="nav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Головна</a></li>
+                    <li><a href="tours.html" class="active">Тури</a></li>
+                    <li><a href="about.html">Про нас</a></li>
+                    <li><a href="gallery.html">Галерея</a></li>
+                    <li><a href="contacts.html">Контакти</a></li>
+                </ul>
+               <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+</div>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="tours.html">Тури</a></li>
+            <li><a href="about.html">Про нас</a></li>
+            <li><a href="gallery.html">Галерея</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Наші Тури</h1>
+                <p>Знайдіть ідеальну подорож для себе</p>
+            </div>
+        </section>
+
+        <section class="tours-filter">
+            <div class="container">
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">Всі тури</button>
+                    <button class="filter-btn" data-filter="europe">Європа</button>
+                    <button class="filter-btn" data-filter="asia">Азія</button>
+                    <button class="filter-btn" data-filter="exotic">Екзотика</button>
+                    <button class="filter-btn" data-filter="beach">Пляжний відпочинок</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="tours-list" class="all-tours">
+            <div class="container">
+                <div class="tours-grid">
+                    <div class="tour-card" data-category="europe">
+                        <div class="tour-image">
+                            <img src="images/tour-paris.jpg" alt="Париж, Франція">
+                            <div class="tour-price">€1,199</div>
+                            <div class="tour-badge">Хіт</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3>Романтичний Париж</h3>
+                            <p>5 днів у місті кохання - Ейфелева вежа, Лувр, Монмартр</p>
+                            <div class="tour-features">
+                                <span><i class="fas fa-calendar"></i> 5 днів</span>
+                                <span><i class="fas fa-user"></i> 2 особи</span>
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="tour-actions">
+                                <button class="details-btn" onclick="showTourModal(4)">Детальніше</button>
+                                <button class="book-btn" onclick="alert('Тур заброньовано!')">Забронювати</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="asia">
+                        <div class="tour-image">
+                            <img src="images/tour-japan.jpg" alt="Токіо, Японія">
+                            <div class="tour-price">€2,499</div>
+                            <div class="tour-badge">Новинка</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3>Японія: Традиції та Інновації</h3>
+                            <p>10 днів у Токіо, Кіото та Осаці - сакура, храми, суші</p>
+                            <div class="tour-features">
+                                <span><i class="fas fa-calendar"></i> 10 днів</span>
+                                <span><i class="fas fa-user"></i> 1-3 особи</span>
+                                <span><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <div class="tour-actions">
+                                <button class="details-btn" onclick="showTourModal(5)">Детальніше</button>
+                                <button class="book-btn" onclick="alert('Тур заброньовано!')">Забронювати</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="exotic">
+                        <div class="tour-image">
+                            <img src="images/tour-maldives.jpg" alt="Мальдіви">
+                            <div class="tour-price">€3,299</div>
+                            <div class="tour-badge">Люкс</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3>Мальдіви: Рай на Землі</h3>
+                            <p>7 днів у бунгало над водою - дайвінг, SPA, романтика</p>
+                            <div class="tour-features">
+                                <span><i class="fas fa-calendar"></i> 7 днів</span>
+                                <span><i class="fas fa-user"></i> 2 особи</span>
+                                <span><i class="fas fa-star"></i> 5.0</span>
+                            </div>
+                            <div class="tour-actions">
+                                <button class="details-btn" onclick="showTourModal(6)">Детальніше</button>
+                                <button class="book-btn" onclick="alert('Тур заброньовано!')">Забронювати</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="beach">
+                        <div class="tour-image">
+                            <img src="images/tour-bali.jpg" alt="Балі, Індонезія">
+                            <div class="tour-price">€1,899</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3>Балі: Острів Богів</h3>
+                            <p>8 днів на райському острові - серфінг, йога, храми</p>
+                            <div class="tour-features">
+                                <span><i class="fas fa-calendar"></i> 8 днів</span>
+                                <span><i class="fas fa-user"></i> 1-2 особи</span>
+                                <span><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="tour-actions">
+                                <button class="details-btn" onclick="showTourModal(7)">Детальніше</button>
+                                <button class="book-btn" onclick="alert('Тур заброньовано!')">Забронювати</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="europe">
+                        <div class="tour-image">
+                            <img src="images/tour-spain.jpg" alt="Іспанія">
+                            <div class="tour-price">€999</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3>Іспанія: Барселона та Коста-Брава</h3>
+                            <p>6 днів каталонської культури - Гауді, фламенко, море</p>
+                            <div class="tour-features">
+                                <span><i class="fas fa-calendar"></i> 6 днів</span>
+                                <span><i class="fas fa-user"></i> 1-4 особи</span>
+                                <span><i class="fas fa-star"></i> 4.6</span>
+                            </div>
+                            <div class="tour-actions">
+                                <button class="details-btn" onclick="showTourModal(8)">Детальніше</button>
+                                <button class="book-btn" onclick="alert('Тур заброньовано!')">Забронювати</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tour-card" data-category="asia">
+                        <div class="tour-image">
+                            <img src="images/tour-thailand.jpg" alt="Таїланд">
+                            <div class="tour-price">€1,599</div>
+                        </div>
+                        <div class="tour-content">
+                            <h3>Таїланд: Бангкок та Пхукет</h3>
+                            <p>9 днів у країні посмішок - храми, острови, екзотична кухня</p>
+                            <div class="tour-features">
+                                <span><i class="fas fa-calendar"></i> 9 днів</span>
+                                <span><i class="fas fa-user"></i> 2 особи</span>
+                                <span><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="tour-actions">
+                                <button class="details-btn" onclick="showTourModal(9)">Детальніше</button>
+                                <button class="book-btn" onclick="alert('Тур заброньовано!')">Забронювати</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="special-offer" class="special-offers">
+            <div class="container">
+                <h2>Спеціальні Пропозиції</h2>
+                <div class="offer-banner">
+                    <div class="offer-content">
+                        <h3>ЗНИЖКА 20%</h3>
+                        <p>На всі тури до Європи при бронюванні за 2 місяці</p>
+                        <p class="offer-period">Діє до 31 грудня 2024</p>
+                        <button class="cta-button" onclick="scrollToSection('tours-list')">Переглянути тури</button>
+                    </div>
+                    <div class="offer-image">
+                        <img src="images/offer-banner.jpg" alt="Спеціальна пропозиція">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <h2>Часті Запитання</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Як забронювати тур?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Оберіть бажаний тур, натисніть "Забронювати" та заповніть форму. Наш менеджер зв'яжеться з вами протягом 24 годин.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Чи потрібна віза?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Залежить від країни призначення. Ми надаємо повну консультацію щодо документів для кожного туру.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h4>Чи включено страхування?</h4>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Так, медичне страхування включено у вартість всіх турів. Додаткові види страхування можна замовити окремо.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Travel Time</h4>
+                    <p>Подорожуй з нами - отримуй незабутні враження!</p>
+                    <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://t.me" target="_blank"><i class="fab fa-telegram"></i></a>
+</div>
+                </div>
+                <div class="footer-section">
+                    <h4>Контакти</h4>
+                    <p><i class="fas fa-phone"></i> +38 (099) 123-45-67</p>
+                   <p><i class="fas fa-envelope"></i> sofiia.pavlova.pp.2024@lpnu.ua</p>
+                    <p><i class="fas fa-map-marker-alt"></i>м. Львів, вул. Бернарда Меретина, 10</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Швидкі посилання</h4>
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="tours.html">Тури</a></li>
+                        <li><a href="about.html">Про нас</a></li>
+                        <li><a href="gallery.html">Галерея</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Travel Time. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <div id="tourModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3 id="modalTitle">Деталі туру</h3>
+            <div id="modalContent">
+                <!-- Content will be loaded by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        const additionalTourData = {
+            4: {
+                title: "Романтичний Париж",
+                content: `
+                    <div class="tour-modal-content">
+                        <div class="tour-modal-image">
+                            <img src="images/tour-paris.jpg" alt="Париж">
+                        </div>
+                        <div class="tour-modal-details">
+                            <h4>Деталі туру:</h4>
+                            <ul>
+                                <li><strong>Тривалість:</strong> 5 днів / 4 ночі</li>
+                                <li><strong>Маршрут:</strong> Ейфелева вежа, Лувр, Монмартр, Версаль</li>
+                                <li><strong>Харчування:</strong> Сніданки + 2 романтичні вечері</li>
+                                <li><strong>Готель:</strong> 4* в центрі міста</li>
+                                <li><strong>Екскурсії:</strong> Весь Париж за 5 днів</li>
+                            </ul>
+                            <div class="tour-price">Ціна: €1,199 на особу</div>
+                            <button class="cta-button" style="width:100%;margin-top:15px;" onclick="alert('Тур додано до кошика!')">Забронювати</button>
+                        </div>
+                    </div>
+                `
+            },
+            5: {
+                title: "Японія: Традиції та Інновації",
+                content: `
+                    <div class="tour-modal-content">
+                        <div class="tour-modal-image">
+                            <img src="images/tour-japan.jpg" alt="Японія">
+                        </div>
+                        <div class="tour-modal-details">
+                            <h4>Деталі туру:</h4>
+                            <ul>
+                                <li><strong>Тривалість:</strong> 10 днів / 9 ночей</li>
+                                <li><strong>Маршрут:</strong> Токіо - Кіото - Осака - Хаконе</li>
+                                <li><strong>Харчування:</strong> Сніданки + 5 обідів</li>
+                                <li><strong>Готель:</strong> 4* + 1 ніч у рьокані</li>
+                                <li><strong>Екскурсії:</strong> Храми, сади, суші-майстерність</li>
+                            </ul>
+                            <div class="tour-price">Ціна: €2,499 на особу</div>
+                            <button class="cta-button" style="width:100%;margin-top:15px;" onclick="alert('Тур додано до кошика!')">Забронювати</button>
+                        </div>
+                    </div>
+                `
+            }
+        };
+
+        Object.assign(window.tourData, additionalTourData);
+
+        // Фільтрація турів
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const tourCards = document.querySelectorAll('.tour-card');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    
+                    tourCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('i');
+                    
+                    document.querySelectorAll('.faq-answer').forEach(ans => {
+                        if (ans !== answer) {
+                            ans.classList.remove('active');
+                            ans.previousElementSibling.querySelector('i').classList.remove('fa-chevron-up');
+                            ans.previousElementSibling.querySelector('i').classList.add('fa-chevron-down');
+                        }
+                    });
+                    
+                    answer.classList.toggle('active');
+                    icon.classList.toggle('fa-chevron-down');
+                    icon.classList.toggle('fa-chevron-up');
+                });
+            });
+        });
+    </script>
+    <script>
+// Фільтрація турів - простий код
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const tourCards = document.querySelectorAll('.tour-card');
+    
+    console.log('Кнопки знайдено:', filterBtns.length);
+    console.log('Картки знайдено:', tourCards.length);
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            console.log('Клік на кнопку:', this.textContent);
+            
+            // Видаляємо активний клас з усіх кнопок
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Додаємо активний клас до поточної кнопки
+            this.classList.add('active');
+            
+            // Отримуємо значення фільтру
+            const filter = this.getAttribute('data-filter');
+            console.log('Фільтр:', filter);
+            
+            // Фільтруємо картки турів
+            tourCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filter === 'all' || category === filter) {
+                    card.style.display = 'block';
+                    console.log('Показуємо картку:', card.querySelector('h3').textContent);
+                } else {
+                    card.style.display = 'none';
+                    console.log('Ховаємо картку:', card.querySelector('h3').textContent);
+                }
+            });
+        });
+    });
+});
+</script>
+</body>
+</html>
