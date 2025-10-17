@@ -2413,3 +2413,58 @@ h1, h2, h3, h4, h5, h6 {
 .logo:hover {
     opacity: 0.8;
 }
+
+/* Анімований літак */
+.animated-plane {
+    position: absolute;
+    top: 20%;
+    right: 8%;
+    z-index: 5;
+    opacity: 0.9;
+    filter: drop-shadow(0 5px 15px rgba(0, 123, 255, 0.4));
+}
+
+/* Анімація плавного руху */
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    25% { 
+        transform: translateY(-15px) rotate(2deg); 
+    }
+    50% { 
+        transform: translateY(-10px) rotate(0deg); 
+    }
+    75% { 
+        transform: translateY(-5px) rotate(-2deg); 
+    }
+}
+
+.animated-plane {
+    animation: float 8s ease-in-out infinite;
+}
+
+/* Анімація крил */
+.plane-wing {
+    animation: wingFlap 2s ease-in-out infinite;
+}
+
+@keyframes wingFlap {
+    0%, 100% { transform: scaleY(1); }
+    50% { transform: scaleY(1.1); }
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .animated-plane {
+        top: 15%;
+        right: 5%;
+        transform: scale(0.6);
+    }
+}
+
+@media (max-width: 480px) {
+    .animated-plane {
+        display: none;
+    }
+}
