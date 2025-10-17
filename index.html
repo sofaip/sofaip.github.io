@@ -48,27 +48,51 @@
 
     <main>
         <section id="hero" class="hero">
-            <div class="hero-slider">
-                <div class="slide active">
-                    <div class="hero-content">
-                        <h1>Відкривай світ з Travel Time</h1>
-                        <p>Неймовірні пригоди чекають на тебе</p>
-                        <button class="cta-button" onclick="scrollToSection('popular-tours')">Знайти тур</button>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="hero-content">
-                        <h1>Подорожуй з комфортом</h1>
-                        <p>Найкращі маршрути по всьому світу</p>
-                        <button class="cta-button" onclick="scrollToSection('popular-tours')">Переглянути пропозиції</button>
-                    </div>
-                </div>
+    <!-- Анімований літак -->
+    <div class="animated-plane">
+        <svg width="120" height="80" viewBox="0 0 120 80">
+            <!-- Основа літака -->
+            <path class="plane-body" d="M10,40 L100,40 L85,50 L75,45 L65,55 L55,55 L50,45 L35,50 Z" fill="#007bff" stroke="#0056b3" stroke-width="1.5"/>
+            
+            <!-- Крила -->
+            <path class="plane-wing" d="M40,40 L60,20 L80,40 L60,40 Z" fill="#0056b3" opacity="0.8"/>
+            <path class="plane-wing" d="M40,40 L60,60 L80,40 L60,40 Z" fill="#0056b3" opacity="0.8"/>
+            
+            <!-- Вікно -->
+            <circle cx="60" cy="40" r="3" fill="#ffffff"/>
+            
+            <!-- Анімації -->
+            <animateTransform 
+                attributeName="transform"
+                type="translate"
+                values="0 0; -150 0; 150 0; 0 0"
+                dur="15s"
+                repeatCount="indefinite"
+            />
+        </svg>
+    </div>
+    
+    <div class="hero-slider">
+        <div class="slide active">
+            <div class="hero-content">
+                <h1>Відкривай світ з Travel Time</h1>
+                <p>Неймовірні пригоди чекають на тебе</p>
+                <button class="cta-button" onclick="scrollToSection('popular-tours')">Знайти тур</button>
             </div>
-            <div class="slider-controls">
-                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="slide">
+            <div class="hero-content">
+                <h1>Подорожуй з комфортом</h1>
+                <p>Найкращі маршрути по всьому світу</p>
+                <button class="cta-button" onclick="scrollToSection('popular-tours')">Переглянути пропозиції</button>
             </div>
-        </section>
+        </div>
+    </div>
+    <div class="slider-controls">
+        <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+        <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+    </div>
+</section>
 
         <section id="advantages" class="advantages">
             <div class="container">
